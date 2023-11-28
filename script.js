@@ -18,3 +18,18 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// scrollPosition.js
+
+// Save scroll position to sessionStorage
+window.addEventListener('scroll', function() {
+  sessionStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Retrieve scroll position from sessionStorage
+window.addEventListener('DOMContentLoaded', function() {
+  var scrollPosition = sessionStorage.getItem('scrollPosition');
+  if (scrollPosition !== null) {
+    window.scrollTo(0, parseInt(scrollPosition));
+  }
+});

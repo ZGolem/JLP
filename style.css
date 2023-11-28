@@ -24,8 +24,33 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 30px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  background-color: #313131; /* Light gray background color, adjust as needed */
 }
+
+.greyed-out {
+    /* Set styles for a greyed-out button */
+    opacity: 0.35; /* Adjust the opacity as needed */
+    cursor: not-allowed; /* Change cursor to not-allowed to indicate it's disabled */
+	filter: brightness(120%) saturate(150%);
+    /* You can also add additional styles like changing the background color or border */
+}
+
+.text-box {
+  background-color: #313131;
+  padding: 10px 20px; /* Adjust padding as needed */
+  color: white;
+  position: relative;
+}
+
+.highlight-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust the height of the stripe */
+  background-color: #555555; /* Lighter color for the stripe */
+}
+
 
 th {
   background-color: #444;
@@ -42,11 +67,54 @@ td {
   font-size: 16px;
   font-weight: 400;
   border-bottom: 1px solid #555;
+  
 }
+
+td.c1 {
+  color: #555; /* First color option */
+}
+
 
 tr:hover {
   background-color: #333;
 }
+
+
+
+/* styles for the second table */
+table.second-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+
+table.second-table th, table.second-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+table.second-table th:first-child, table.second-table td:first-child, table.second-table tr:first-child {
+  background-color: #444444;
+  font-weight: bold;
+}
+
+table.third-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+
+table.third-table th, table.third-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+
+
 
 @media only screen and (max-width: 768px) {
   h1 {
@@ -92,8 +160,37 @@ img.three {
 
 }
 
+img.four {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  
+  
+}
+
+img.four:hover {
+  transition: filter 0.3s ease;
+  filter: brightness(50%)
+}
 
 
+
+.row {
+    text-align: justify;
+}
+
+.row img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.row:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
 
 
 #tabButton {
@@ -102,9 +199,10 @@ img.three {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #aaa;
+  color: #c7cccc;
   border: none;
   background-color: transparent;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
   padding: 0.5rem 1rem;
   position: relative;
 }
@@ -118,33 +216,40 @@ img.three {
   border-bottom: 1px solid #ccc;
 }
 
-tabButton:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+#tabButton:hover {
+  background-color: #2f2f2f;
+  cursor: pointer;
 }
 
-tabButton:focus {
+#tabButton:focus {
   outline: none;
 }
 
 
 #logButton {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #a04040;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+            display: inline-block;
+            padding: 10px 20px; /* Increased padding */
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #181818; /* Dark grey border */
+            color: #c7cccc; /* Text color */
+            background-color: #4f4f4f; /* Darkish grey background color */
+            border-radius: 4px; /* Rounded corners */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+            margin: 4px; /* Margin between buttons */
+			 text-transform: uppercase;
 }
 
 #logButton:hover {
-  background-color: #c04040;
+  background-color: #2f2f2f;
   cursor: pointer;
 }
+
+
 
 
 
